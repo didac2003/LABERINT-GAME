@@ -21,8 +21,6 @@ public class laberintGame {
             finalitzar=jugador.moviment(posicio,array,contador);
             contador--;
             System.out.println("Moviments: "+contador);
-        }while(finalitzar);
-        
-        }  
-    }
-
+        } while(finalitzar);
+    }  
+}

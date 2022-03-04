@@ -3,21 +3,17 @@ import java.util.List;
 public class tauler  {
     public static void mostrarQuadricula(String array [][]){
         
-
        for (int i = 0; i < array.length; i++) {
            for (int j = 0; j < array[0].length; j++) {
                array[i][j]=" ";
            }
        }
        
-       
-       
-       
         for (int i = 0; i < array[0].length; i++) {
            array[0][i]="\u2501";
            array[10][i]="\u2501";
         }
-       for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
            array[i][0]="\u2503";
  
         }
@@ -54,6 +50,7 @@ public class tauler  {
         for (int i = 11; i < 16; i++) {
             array[6][i]="\u2501";
         }
+
         array[9][0]="X";
         array[1][1]="\uD83D\uDCA3";
         array[6][11]="\u250f";
@@ -74,21 +71,12 @@ public class tauler  {
         array[7][16]="\uD83D\uDC9B";
         array[7][18]="\u2503";
         array[7][19]=" ";
-              for (int i = 0; i < array.length; i++) {
-                  for (int j = 0; j < array[0].length; j++) {
-                      System.out.print(array[i][j]);
-                  }
-                  System.out.println();
-              }
-            
 
-                
-                
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }     
+    }
 }
-          
-
-
-
-
-}
-
