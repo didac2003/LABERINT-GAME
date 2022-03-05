@@ -1,21 +1,48 @@
-package funcions.logica.grafics;
-import java.util.List;
-public class tauler  {
+package funcions.grafics;
+import utils.*;
+
+public class funcionsMostrar {
+    public static void benvinguda(){
+        System.out.println(colors.BLUE + "**************************");
+        System.out.println("BENVINGUT AL LABERINT GAME");
+        System.out.println("**************************" + colors.RESET);
+    }
+
+    public static void tableroDerrota(String array [][]){
+        for (int j2 = 0; j2 < array.length; j2++) {
+            for (int j3 = 0; j3 < array[0].length; j3++) {
+                System.out.print(colors.RED + array[j2][j3]);  
+            }
+            System.out.println();
+        }
+        System.out.println(colors.BLUE+ "**************************");
+        System.out.println("Has perdut!");
+        System.out.println("**************************" + colors.RESET);   
+    }
+
     public static void mostrarQuadricula(String array [][]){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        } 
+    }
+
+    public static void omple(String array[][]){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                array[i][j]=" ";
+            }
+        }
         
-       for (int i = 0; i < array.length; i++) {
-           for (int j = 0; j < array[0].length; j++) {
-               array[i][j]=" ";
-           }
-       }
-       
         for (int i = 0; i < array[0].length; i++) {
-           array[0][i]="\u2501";
-           array[10][i]="\u2501";
+            array[0][i]="\u2501";
+            array[10][i]="\u2501";
         }
         for (int i = 0; i < 9; i++) {
-           array[i][0]="\u2503";
- 
+            array[i][0]="\u2503";
+    
         }
         for (int i = 0; i < array.length; i++) {
             array[i][19]="\u2503";
@@ -71,12 +98,5 @@ public class tauler  {
         array[7][16]="\uD83D\uDC9B";
         array[7][18]="\u2503";
         array[7][19]=" ";
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                System.out.print(array[i][j]);
-            }
-            System.out.println();
-        }     
     }
 }
